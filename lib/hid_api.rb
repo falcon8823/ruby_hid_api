@@ -61,4 +61,7 @@ module HidApi
 end
 
 # Attempts to extend some core FFI classes with platform-aware string-handling
-FFI::AbstractMemory.include(HidApi::Util::WCHAR)
+class FFI::AbstractMemory
+  include(HidApi::Util::WCHAR)
+end
+
